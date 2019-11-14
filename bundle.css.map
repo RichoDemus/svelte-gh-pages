@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "file": "bundle.css",
+  "sources": [
+    "../src/App.svelte"
+  ],
+  "sourcesContent": [
+    "<script>\n\tlet counter = 0;\n</script>\n\n<style>\n\th1 {\n\t\tcolor: purple;\n\t}\n</style>\n\n<h1>Hello, counter is {counter}!</h1>\n<button on:click=\"{() => counter += 1}\">+</button>\n<button on:click=\"{() => counter -= 1}\">-</button>\n"
+  ],
+  "names": [],
+  "mappings": "AAKC,EAAE,cAAC,CAAC,AACH,KAAK,CAAE,MAAM,AACd,CAAC"
+}
