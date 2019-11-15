@@ -1,5 +1,10 @@
 <script>
-	let counter = 0;
+	import { count } from './stores.js';
+	let counter;
+
+	const unsubscribe = count.subscribe(value => {
+		counter = value;
+	});
 </script>
 
 <style>
@@ -9,5 +14,5 @@
 </style>
 
 <h1>Hello, counter is {counter}!</h1>
-<button on:click="{() => counter += 1}">+</button>
-<button on:click="{() => counter -= 1}">-</button>
+<button on:click="{() => count.update(n => n + 1)}">+</button>
+<button on:click="{() => count.update(n => n - 1)}">-</button>
