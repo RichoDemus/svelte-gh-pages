@@ -1,3 +1,18 @@
+# selte gh pages
+After this is the original readme from svelte
+## Running
+```
+npm run dev
+```
+## deploying to gh pages
+```
+npm run build
+npm run deploy
+```
+visible at https://richodemus.github.io/svelte-gh-pages/
+
+## original readme follows
+
 *Psst — looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*
 
 ---
