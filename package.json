@@ -18,8 +18,8 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "start": "sirv public --single",
-    "start:dev": "sirv public --single --dev",
+    "start": "sirv dist --single",
+    "start:dev": "sirv dist --single --dev",
     "deploy": "gh-pages -d dist"
   }
 }
