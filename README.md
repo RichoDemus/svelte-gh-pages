@@ -1,4 +1,4 @@
-# selte gh pages
+# svelte gh pages
 After this is the original readme from svelte
 ## Running
 ```
