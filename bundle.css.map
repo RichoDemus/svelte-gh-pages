@@ -5,8 +5,8 @@
     "../src/App.svelte"
   ],
   "sourcesContent": [
-    "<script>\n\timport { count } from './stores.js';\n\tlet counter;\n\n\tconst unsubscribe = count.subscribe(value => {\n\t\tcounter = value;\n\t});\n</script>\n\n<style>\n\th1 {\n\t\tcolor: purple;\n\t}\n</style>\n\n<h1>Hello, counter is {counter}!</h1>\n<button on:click=\"{() => count.update(n => n + 1)}\">+</button>\n<button on:click=\"{() => count.update(n => n - 1)}\">-</button>\n"
+    "<script>\n\timport { count } from './stores.js';\n\tlet counter;\n\n\tconst unsubscribe = count.subscribe(value => {\n\t\tcounter = value;\n\t});\n\n\tlet key;\n\tlet keyCode;\n\tfunction handleKeydown(event) {\n\t\tkey = event.key;\n\t\tkeyCode = event.keyCode;\n\n\t\tif(key === \"+\") {\n\t\t\tincrement();\n\t\t} else if (key === \"-\") {\n\t\t\tdecrement();\n\t\t}\n\t}\n\n\tfunction increment() {\n\t\tcount.update(n => n + 1)\n\t}\n\n\tfunction decrement() {\n\t\tcount.update(n => n - 1)\n\t}\n</script>\n\n<style>\n\th1 {\n\t\tcolor: purple;\n\t}\n</style>\n\n<svelte:window on:keydown={handleKeydown}/>\n\n<h1>Hello, counter is {counter}!</h1>\n<button on:click=\"{() => increment()}\">+</button>\n<button on:click=\"{() => decrement()}\">-</button>\n<p>key: {key}, key code: {keyCode}</p>\n"
   ],
   "names": [],
-  "mappings": "AAUC,EAAE,cAAC,CAAC,AACH,KAAK,CAAE,MAAM,AACd,CAAC"
+  "mappings": "AA+BC,EAAE,cAAC,CAAC,AACH,KAAK,CAAE,MAAM,AACd,CAAC"
 }
